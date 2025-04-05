@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - Programa de Formação</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="alura.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="left-section">
+    <img src="logo.png" alt="Logo do programa" class="logo">
+    <img src="ilustra.png" alt="Imagem ilustrativa" class="form-image">
+  </section>
+
+
+  <section class="right-section">
+    <h2>Formulário de Inscrição</h2>
+    <form id="formInscricao">
+      <div id="mensagem-usuario" class="mensagem-usuario" style="display: none;"></div>
+           <label for="idUsuario">CPF | ID do Usuário:</label>
+           <input type="text" id="idUsuario" name="idUsuario" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+        <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
+        
+      <label for="nome" >Nome Completo</label>
+      <input type="text" id="nome" name="nome"placeholder="Digite aqui.."    required>
+
+
+      <label for="data-nascimento">Data de Nascimento</label>
+      <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+
+     
+
+
+      <label for="sexo">Sexo</label>
+      <select id="sexo" name="sexo" required>
+        <option value="">Selecione...</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Seu@email.com" required>
+
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="Ex: (00) 12345678"required>
+
+
+      <label for="area-interesse">Área de Interesse</label>
+      <input type="text" id="area-interesse" name="area-interesse" placeholder="Digite aqui.."required>
+
+
+      <label for="formacao">Formação Acadêmica</label>
+      <input type="text" id="formacao" name="formacao" placeholder="Digite aqui.."  required>
+
+
+      <label for="experiencia">Experiência Profissional</label>
+      <textarea id="experiencia" name="experiencia" rows="4" required placeholder="Digite aqui.."   ></textarea>
+
+
+      <label for="documento">Anexo de Foto do Documento de Identidade</label>
+      <input type="file" id="documento" name="documento" accept="image/*" required>
+
+
+      <label for="endereco">Endereço Residencial</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+
+      <label for="comprovante">Anexo de Foto do Comprovante de Residência</label>
+      <input type="file" id="comprovante" name="comprovante" accept="image/*" required>
+
+
+      <div class="trilha-container">
+        <label class="trilha-label">Selecione apenas uma trilha</label>
+        <div class="trilha-options">
+            <label class="trilha-card">
+                
+                <input type="radio" name="trilha" value="frontend" required>
+                <div class="card-content">
+                    <span class="icon"><img src="front.png" alt="Front-end"></span>
+                    <p>Programação Front-end</p>
+                </div>
+            </label>
+            
+            <label class="trilha-card">
+                <input type="radio" name="trilha" value="backend" required>
+                <div class="card-content">
+                    <span class="icon"><img src="back.png" alt="Back-end"></span>
+                    <p>Programação Back-end</p>
+                </div>
+            </label>
+            
+            <label class="trilha-card">
+                <input type="radio" name="trilha" value="jogos" required>
+                <div class="card-content">
+                    <span class="icon"><img src="jogos.png" alt="Criaçao de jogos"></span>
+                    <p>Programação de Jogos</p>
+                </div>
+            </label>
+            
+            <label class="trilha-card">
+                
+                <input type="radio" name="trilha" value="design" required>
+                <div class="card-content">
+                    <span class="icon"><img src="desing.png" alt="design"></span>
+                    <p>Design e Experiência</p>
+                </div>
+            </label>
+            
+            <label class="trilha-card">
+                <input type="radio" name="trilha" value="ciencia-dados" required>
+                <div class="card-content">
+                    <span class="icon"><img src="banco.png" alt="BANCO DE DADOS"></span>
+                    <p>Ciência de Dados</p>
+                </div>
+            </label>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+      <label class="checkbox-container">
+        <input type="checkbox" id="aceite" name="aceite" required>
+        Declaro que li e concordo com os termos e condições e com a política de privacidade.
+      </label>
+
+      <div id="mensagem-usuario" class="mensagem-usuario" style="display: none;"></div>
+  
+
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+    <footer class="trilhas-logo">
+      <img src="logo.png" alt="Logo Trilhas">
+    </footer>
+  </section>
+</body>
+</html>

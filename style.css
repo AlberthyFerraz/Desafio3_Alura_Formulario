@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*TESTE */
+.mensagem-usuario {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #4caf50;
+    border-radius: 8px;
+    background-color: #eafbea;
+    color: #2e7d32;
+    font-weight: bold;
+  }
+
+
+
+
+body {
+    background-color: #E8F0FE; 
+    color: #292524;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* Estilizando as seções laterais */
+.left-section, .right-section {
+    flex: 1 1 45%;
+    padding: 20px;
+}
+
+
+/* Seção esquerda: fundo azul */
+.left-section {
+    background-color: #2135a6; /* Azul */
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    align-self: flex-start;
+    border-radius: 0.2rem;
+
+    
+}
+
+
+.logo {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+
+.form-image {
+    max-width: 500px;
+    height: 500px;
+    top: 140px;
+
+    
+}
+
+
+/* Seção direita: formulário */
+.right-section {
+   background: #FFFFFF; /* Branco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.right-section h2 {
+    color: #F3541C; /* Laranja */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form label {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #D6D3D1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #F3541C; /* Laranja */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+
+form button:hover {
+    background-color: #E43A12; /* Laranja mais escuro */
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+#mensagem-usuario {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.trilhas-logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.trilhas-logo img {
+    max-width: 80%;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 40%;  /* A imagem vai ocupar no máximo 100% da largura do seu container */
+        height: auto;     /* A altura será ajustada automaticamente para manter a proporção */
+    }
+    .form-image{
+        max-width: 60%;  /* A imagem vai ocupar no máximo 100% da largura do seu container */
+        height: auto;     /* A altura será ajustada automaticamente para manter a proporção */
+    }
+    body {
+        flex-direction: column-reverse;
+    }
+    .left-section
+    .left-section, .right-section {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* teste */
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon img{
+    width: 80px; /* Define o tamanho da imagem */
+    height: auto;
+}
+.trilha-card image{
+    width: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trilha-container {
+    text-align: left;
+}
+
+.trilha-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.trilha-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.trilha-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.trilha-card input {
+    display: none;
+}
+
+.trilha-card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2135a6;
+}
+
+.trilha-card .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    
+}
+
+.trilha-card p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.trilha-card input:checked + .card-content {
+    color: #e4572e;
+}
+
+.trilha-card input:checked ~ & {
+    border-color: #e4572e;
+}
+
+.trilha-card input:checked + .card-content p {
+    font-weight: bold;
+}
+
+.trilha-card input:checked + .card-content {
+    border-color: #e4572e;
+}
+
+.trilha-card:hover {
+    border-color: #e4572e;
+}
+
+@media (max-width: 768px) {
+    .trilha-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trilha-card {
+        padding: 15px;
+    }
+
+    .trilha-card p {
+        font-size: 13px;
+    }
+}
+
+/* Para dispositivos móveis */
+@media (max-width: 480px) {
+    .trilha-options {
+        grid-template-columns: 1fr; /* Coloca os cards em uma coluna */
+    }
+
+    .trilha-card {
+        padding: 10px;
+    }
+
+    .trilha-card .icon {
+        font-size: 20px;
+    }
+
+    .trilha-card p {
+        font-size: 12px;
+    }
+}
