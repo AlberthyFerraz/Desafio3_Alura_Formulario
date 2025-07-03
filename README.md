@@ -14,7 +14,7 @@ Este é um projeto simples e funcional de um **formulário de inscrição** dese
 
 ---
 
-## 🧰 Tecnologias utilizadas
+## 🧰 Tecnologias utilizadas:
 
 - **HTML5**
 - **CSS3**
